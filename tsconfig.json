@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",               // or 'esnext' for modern browsers
+    "module": "esnext",            // 'esnext' for using modern JavaScript module system
+    "moduleResolution": "node",    // Helps resolve modules in a node.js environment
+    "esModuleInterop": true,       // Allows default imports from CommonJS modules
+    "strict": true,                // Enforces strict type-checking
+    "skipLibCheck": true,          // Skip checking libraries to speed up compilation
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",            // Use the JSX transform in React 17+
+    "types": ["jest"],
+    "lib": ["es2015", "dom"]
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

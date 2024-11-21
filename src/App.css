@@ -1,38 +1,122 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2E1B47, #3A2567);
+  color: #EAEAEA;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+}
+
+/* Poll Container */
+.container {
+  background: #1F1432;
+  padding: 40px 50px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  text-align: center;
+  border: 1px solid #3E2561;
+}
+
+/* Poll Header */
+h1 {
+  color: #DDB8FF;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+}
+
+/* Poll Options List */
+ul.options-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.options-list li {
+  background: #5E3C8A;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  color: #EAEAEA;
+  transition: all 0.3s ease-in-out;
+}
+
+ul.options-list li:hover {
+  background: #7A4C9C;
+}
+
+ul.options-list li.selected {
+  background: #9A5CB1;
   color: white;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+/* Option Fill Bar */
+.option-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 90px;
+  opacity: 40%;
+  border-radius: 10px;
+  background: #ffffff;
+  transition: width 0.4s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Submit Button */
+button.vote-btn {
+  background: #ffffff;
+  border: solid 4px #6B4C88;
+  color: #6B4C88;
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 4px;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 30px;
 }
+
+button.vote-btn:hover {
+  background: #6B4C88;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(58, 37, 103, 0.3);
+}
+
+button.vote-btn:disabled {
+  background: #6B4C88;
+  opacity: 25%;
+  color: #D1C0DC;
+  cursor: not-allowed;
+}
+
+/* Vote Results */
+.vote-results {
+  font-size: 1rem;
+  color: #DDB8FF;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+/* Feedback and Messages */
+.text-muted {
+  color: #B2A6C6;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+
